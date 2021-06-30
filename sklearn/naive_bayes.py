@@ -643,7 +643,7 @@ class _BaseDiscreteNB(_BaseNB):
         Returns
         -------
         self : object
-            Returns the instance itself.
+            Fitted estimator.
         """
         X, y = self._check_X_y(X, y)
         _, n_features = X.shape
@@ -1261,7 +1261,7 @@ class CategoricalNB(_BaseDiscreteNB):
         Returns
         -------
         self : object
-            Returns the instance itself.
+            Fitted estimator.
         """
         return super().fit(X, y, sample_weight=sample_weight)
 
@@ -1305,7 +1305,7 @@ class CategoricalNB(_BaseDiscreteNB):
         Returns
         -------
         self : object
-            Returns the instance itself.
+            Partially fitted estimator.
         """
         return super().partial_fit(X, y, classes, sample_weight=sample_weight)
 
